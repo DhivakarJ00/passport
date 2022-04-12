@@ -16,12 +16,12 @@ pipeline{
      stage('Deploy to artifactory'){
         steps{
         rtUpload(
-         serverId : 'jfrog_server1',
+         serverId : 'passport1',
          spec :'''{
            "files" :[
            {
            "pattern":"target/*.jar",
-           "target":"passport_TM_Maven"
+           "target":"passport-project1"
            }
            ]
          }''',
